@@ -1,8 +1,10 @@
 const path = require("path")
 const User = require(path.join(__dirname, "..", "models", "userModel.js"))
+const Booking = require(path.join(__dirname, "..", "models", "bookingModel.js"))
 const { validateEmail, validatePassword } = require(path.join(__dirname, "..", "utils", "validator.js"))
 const { generateAccessToken, generateRefreshToken} = require(path.join(__dirname, "..", "config", "tokenConfig.js"))
 const { logEvents } = require(path.join(__dirname, "..", "middlewares", "logEvents.js"))
+const { userError } = require(path.join(__dirname, "..", "utils", "customError.js"))
 const _ = require('lodash');
 const bcrypt = require("bcrypt")
 const registerUser = async (req, res) => {
@@ -71,8 +73,8 @@ const loginUser = async(req, res) => {
             const refreshToken = generateRefreshToken(id, foundUser.role)
             await User.findByIdAndUpdate(id, {refreshToken : refreshToken}, { new : true})
             res.cookie("refreshToken", refreshToken, { httpOnly : true, maxAge: 60 * 60 * 1000 * 24 * 7, sameSite : "None",  secure : true })
-            //Three Day Refresh Token
-            const detailsOfUserToBeSent = _.omit(foundUser.toObject(), "refreshToken")
+            //Seven Day Refresh Token
+        const detailsOfUserToBeSent = _.omit(foundUser.toObject(), "refreshToken")
         res.status(201).json({...detailsOfUserToBeSent, accessToken : generateAccessToken(id, foundUser.role)})
          }
         else{
@@ -92,24 +94,16 @@ const loginUser = async(req, res) => {
 }
 const getMyBookings = async(req, res) => {
     try{
-        const user = await User.findOne({ _id: req.user._id }).lean();
-        if(!user){
-            throw new userError("You are not a user of folben", 400)
-        }
-        const bookingsCount = user ? user.bookings.length : 0;
-        const userBookings = await User.findOne({ _id: req.user._id })
-      .populate({
-        path: 'bookings.bookingId',
-      }).lean();
-   const bookingsToBeSent = userBookings["bookings"].map((booking) => ({...booking.bookingId}))
-    res.status(200).json({ message : "Retrieval Of Booking Was Successfull", bookings : bookingsToBeSent, count : bookingsCount})          
+        const bookings = await Booking.find({ userId: req.user._id })
+        const bookingsCount = bookings.length
+    res.status(200).json({ message : "Retrieval Of Booking Was Successfull", bookings : bookings, count : bookingsCount})          
         }
         catch(error){
 logEvents(`${error.name}: ${error.message}`, "getMyBookingsError.txt", "userError")
 if(error instanceof userError){
-                return res.status(error.statusCode).json({ message : error.message})
+return res.status(error.statusCode).json({ message : error.message})
 }else{
-                return res.status(500).json({message : "Internal Server Error"})
+return res.status(500).json({message : "Internal Server Error"})
             }
         }
 }
@@ -123,12 +117,12 @@ const logoutUser = async(req, res) => {
         const user = await User.findOne({refreshToken : refreshToken})
         if(!user){
             res.clearCookie("refreshToken", {httpOnly: true, sameSite : "None" , secure  : true })
-            return res.status(204).json({message : "Successfully Logged Out", "success" : true})
+            return res.status(200).json({message : "Successfully Logged Out", "success" : true})
         }
         user.refreshToken = ""
         await user.save();      
         res.clearCookie("refreshToken", {httpOnly: true,  sameSite : "None", secure : true })
-        return res.status(204).json({message : "Successfully Logged Out now", "success" : true})
+        return res.status(200).json({message : "Successfully Logged Out now", "success" : true})
     }catch(error){
         logEvents(`${error.name}: ${error.message}`, "logoutUserError.txt", "userError")
         if (error instanceof userError) {

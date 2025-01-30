@@ -1,6 +1,7 @@
 const validator = require("validator")
 const passwordValidator = require("password-validator");
 const { validatorError } = require("./customError");
+const ADMIN_EMAILS = process.env.ADMIN_EMAILS?.split(",") || [];
 const schema = new passwordValidator();
 schema
 .is().min(8)                                    // Minimum length 8
@@ -22,6 +23,10 @@ const validateEmail = async (email) => {
 throw new validatorError("Invalid Email", 400)
     }
 }
+function isAdminEmail(email) {
+    return ADMIN_EMAILS.includes(email);
+}
+
 const validateURL = async (url) => {
   try{
     const encodedUrl = encodeURI(url);
@@ -32,4 +37,4 @@ return true
 return false
   }
 }
-module.exports = { validatePassword, validateEmail, validateURL}
+module.exports = { validatePassword, validateEmail, validateURL, isAdminEmail}

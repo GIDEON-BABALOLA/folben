@@ -8,6 +8,11 @@ const driverSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    mobile : {
+        type : String,
+        required : true, 
+        unique : true
+    },
     plateNumber: {
         type : String,
         required : true,

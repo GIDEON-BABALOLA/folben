@@ -24,7 +24,7 @@ const bookingSchema = new mongoose.Schema({
         type : String,
         required : true
     },
-    transactionId:{
+    transactionReference:{
         type:String,
         required:true,
     },
