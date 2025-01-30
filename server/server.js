@@ -34,11 +34,9 @@ app.use((err, req, res, next) => {
   
 app.use("/api/user", userRouter);
 app.use("/api/admin", adminRouter);
-app.use("/api/admin", adminRouter);
-app.use("/api/story", storyRouter); 
-app.use("/api/newsletter", newsletterRouter); 
-app.use("/api/fix", fixRouter); 
-mongoose.connect(process.env.LITENOTE_MONGODB_URL)
+app.use("/api/bookings", bookingsRouter);
+app.use("/api/newsletter", newsletterRouter);
+mongoose.connect(process.env.FOLBEN_MONGODB_URL)
 .then(() => {
       app.listen(PORT, () => {
         console.log(` Connected To Database && Server is running on port ${PORT}`)
