@@ -20,20 +20,12 @@ const authMiddleware = async (req, res, next)=>{
     }
     try{
         if(token){
-            const decoded = jwt.verify(token, process.env.LITENOTE_JWT_TOKEN_SECRET);
+            const decoded = jwt.verify(token, process.env.FOLBEN_JWT_TOKEN_SECRET);
 
             switch (decoded?.role) {
                 case "user":
                     const user = await User.findById(decoded?.id);
                     req.user = user;
-                    break;
-                    case "developer":
-                    const  developer = await Developer.findById(decoded?.id);
-                    req.user = developer;
-                    break;
-                    case "designer":
-                    const designer = await Designer.findById(decoded?.id);
-                    req.user = designer;
                     break;
                     case "admin":
                     const admin = await Admin.findById(decoded?.id);
@@ -47,6 +39,7 @@ const authMiddleware = async (req, res, next)=>{
             return res.status(401).json({"error" : "No Authorization token in the request headers, You are not logged in"})      
         }
     }catch(error){
+        console.log(error)
         logEvents(`${error.name}:${error.message}`, "authenticationErrorLog.txt", "authError")
         return res.status(401).json({"message": "Authentication token has expired", "success" : "false"})
     }

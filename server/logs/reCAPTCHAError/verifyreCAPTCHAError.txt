@@ -1,0 +1,3 @@
+20250130	12:32:36	8be31476-7b48-440d-bb78-36cc6d950a61	Error: getaddrinfo ENOTFOUND www.google.com
+20250130	12:32:52	6c051255-24cc-4385-9f01-af034be8484e	Error: getaddrinfo ENOTFOUND www.google.com
+20250130	12:33:21	f1bf15e0-ea71-458f-98f3-f0c1e57299cf	Error: getaddrinfo ENOTFOUND www.google.com

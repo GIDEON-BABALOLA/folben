@@ -1,0 +1,15 @@
+meta {
+  name: Logout Admin
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/api/admin/logout-admin
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWI2NDNjOTE1ODQwNjMzY2RjNjAwZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczODIzODE5NywiZXhwIjoxNzM4ODQyOTk3fQ.f9fHnHeFEM0uCrU_ALSdqJKgudTZmxDwH20Ue-cq3Js
+}

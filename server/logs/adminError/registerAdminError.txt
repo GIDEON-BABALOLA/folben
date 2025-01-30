@@ -1,0 +1,10 @@
+20250130	12:33:56	67f9d40d-5466-46de-966d-90ee11f3fab5	adminError: Please Fill In All The Fields
+20250130	12:35:30	fbcaf8cd-0dd5-40bf-9464-324314af6683	adminError: You are not an administrator for folben
+20250130	12:35:32	b9b74ba3-0d2d-42ae-a33b-d7d8fa9e031b	adminError: You are not an administrator for folben
+20250130	12:36:21	61547c14-93b3-4434-9470-55868ce30ed0	validatorError: Password must contain minimum of 8 character, a lowercase and uppercase alphabet, no spaces and a minimum of 1 digits
+20250130	12:36:31	96598168-ff76-43ab-91aa-be4844b134dc	adminError: Admin Already Exists
+20250130	12:36:33	172dc4a9-3c47-401c-afd3-24a360d6560a	adminError: Admin Already Exists
+20250130	12:36:34	ef5522d0-229d-45cb-abf8-6ea518da0a89	adminError: Admin Already Exists
+20250130	12:36:35	3e8bcc69-afcb-4e17-ad72-cd8adafbca99	adminError: Admin Already Exists
+20250130	12:36:36	5a46a137-0786-4fbf-b89c-9e507384e65d	adminError: Admin Already Exists
+20250130	12:37:09	d1403fdc-9ba6-4614-8fb4-7f30c6c5455f	adminError: Phone Number Has Been Used

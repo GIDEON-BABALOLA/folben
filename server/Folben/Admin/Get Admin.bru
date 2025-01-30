@@ -1,0 +1,15 @@
+meta {
+  name: Get Admin
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/api/admin/get-admin
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWI2NDNjOTE1ODQwNjMzY2RjNjAwZCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczODIzNzYyNSwiZXhwIjoxNzM4ODQyNDI1fQ.irvokpOBnH7RuQDApZBz9ENoxXwZqHmWADTp_-2STuM
+}
