@@ -13,5 +13,5 @@ const { authMiddleware, isAdministrator } = require(path.join(__dirname, "..", "
 router.post("/register-admin",   registerAdmin);
 router.post("/login-admin", loginAdmin)
 router.get("/get-admin", authMiddleware, isAdministrator, getAdmin)
-router.get("/logout-admin",  authMiddleware, isAdministrator, logoutAdmin)
+router.get("/logout-admin",  logoutAdmin)
 module.exports = router

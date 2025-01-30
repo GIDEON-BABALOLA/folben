@@ -2,7 +2,8 @@
 const path = require("path")
 const Newsletter = require(path.join(__dirname, "..", "models", "newsletterModel.js"))
 const { validateEmail } = require(path.join(__dirname, "..", "utils", "validator.js"))
-const { userError } = require(path.join(__dirname, "..", "utils", "customError.js"))
+const { userError, validatorError } = require(path.join(__dirname, "..", "utils", "customError.js"))
+const { logEvents } = require(path.join(__dirname, "..", "middlewares", "logEvents.js"))
 const subscribeToNewsletter = async (req, res) => {
     const { 
 email
@@ -12,12 +13,16 @@ try{
         throw new userError("Please Fill In All The Fields", 400)
          }
 await validateEmail(email)
+const foundSubscriber = await Newsletter.findOne({email : email})
+if(foundSubscriber){
+    throw new userError("You Have Subscribed To Our Newsletter Before", 400)
+}
 const date = new Date();
 const newSubscriber = await Newsletter.create({ 
 email,
 date
  })
- res.status(201).json({ message: "Creation of User Was Successful", subscriber: newSubscriber });
+ res.status(201).json({ message: "Creation of Subscriber Was Successful", subscriber: newSubscriber });
 }
 catch(error){
     console.log(error)
@@ -42,7 +47,7 @@ const unsubscribeFromNewsletter = async (req, res) => {
         await validateEmail(email)
         const oldSubscriber = await Newsletter.findOneAndDelete({email: email})
         if(!oldSubscriber){
-            throw new userError("This Driver Does Not Exist", 404)
+            throw new userError("You Have Not Subscribed To Our Newsletters", 404)
         }
         res.status(200).json({ message: "Successfully Unsubscribed From Newsletter", oldSubscriber: oldSubscriber });
     }catch(error){

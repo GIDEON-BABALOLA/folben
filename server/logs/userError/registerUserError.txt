@@ -1,0 +1,99 @@
+20250130	20:16:27	0fdca18e-0162-4e00-a6e2-721f7bb17005	userError: Please Fill In All The Fields
+20250130	20:16:30	234b5a57-93ae-4f03-8948-d03ba1e91119	userError: Please Fill In All The Fields
+20250130	20:16:30	69b34188-49af-437f-8a26-4a005d348e56	userError: Please Fill In All The Fields
+20250130	20:16:31	3e3e9fcc-128d-4c36-b575-0f62a297489e	userError: Please Fill In All The Fields
+20250130	20:16:31	aff2ae37-f5e6-4b0c-9b1c-9d5f3773bcdc	userError: Please Fill In All The Fields
+20250130	20:16:31	379c1f33-780d-4d46-aa86-15d26eb84041	userError: Please Fill In All The Fields
+20250130	20:16:31	b9f03d92-d61e-4a7b-8684-9c27b52234a5	userError: Please Fill In All The Fields
+20250130	20:16:31	e5ea6132-8a2d-4f81-b6b1-1a7d6455eb5c	userError: Please Fill In All The Fields
+20250130	20:16:31	ae0c8153-7908-43d0-a9c7-7f3d7ad37fe3	userError: Please Fill In All The Fields
+20250130	20:17:47	0ed18ceb-79f5-4832-a120-0d232f7e13b0	userError: Please Fill In All The Fields
+20250130	20:18:05	6ce5f41e-eda3-4c58-ae4a-04bfa477242c	userError: Please Fill In All The Fields
+20250130	20:18:22	2bc77c15-fb9d-4c09-b26d-db779478877f	userError: User Already Exists
+20250130	20:18:23	36168c1a-cdea-4443-909b-2aafda041e2f	userError: User Already Exists
+20250130	20:19:57	abe65ecd-82ca-4cfc-92de-ad96d57a2e5b	userError: Please Fill In All The Fields
+20250130	20:24:05	5e2fa0e1-ae57-4fb5-91fa-0e02b8f89f07	userError: User Already Exists
+20250130	20:24:34	01f7e122-e9b2-4b83-8885-5ca3b1a3b535	userError: Phone Number Has Been Used
+20250130	20:24:42	2e768b64-b9b5-4191-9efc-7222cc51aa5e	userError: User Already Exists
+20250130	20:28:38	398866e6-0f62-41ce-8cc4-963cf48cbf79	userError: User Already Exists
+20250130	20:28:39	007305e0-2edf-4ee7-b829-06944eae4310	userError: User Already Exists
+20250130	20:28:40	54957996-a230-4449-8583-d8761b7d52b8	userError: User Already Exists
+20250130	20:28:41	50a34413-2054-44f1-a454-f84659919931	userError: User Already Exists
+20250130	20:34:05	3d3d4750-b4db-4555-8fd9-67985b97d3be	userError: User Already Exists
+20250130	20:34:07	21e08fbd-d1c8-44da-b3fa-b57e70f4465f	userError: User Already Exists
+20250130	20:34:21	da2391db-0249-4135-b724-53086845f24a	userError: Phone Number Has Been Used
+20250130	20:34:23	4d41c806-79e4-4d0f-95fe-2f88b8ecca14	userError: Phone Number Has Been Used
+20250130	20:34:26	58ba8f47-a3b5-40e0-8df7-6ca53191b8ac	userError: This Matriculation Number
+20250130	20:34:28	e9cc47a1-78d7-44be-a27b-abf6500c534a	userError: This Matriculation Number
+20250130	20:34:45	f7dabc79-bb05-4ed2-934a-50b528ed7085	userError: This Matriculation Number Has Been Registered With Another Account
+20250130	20:34:46	4153e2f8-dffb-4388-b223-4292ed16b12b	userError: This Matriculation Number Has Been Registered With Another Account
+20250130	20:35:07	16fb6841-2510-4675-8473-883518cc846d	MongoServerError: E11000 duplicate key error collection: folbenDB.users index: username_1 dup key: { username: "Favour Adigun" }
+20250130	20:35:08	52a3f55d-4156-4c62-9474-e04f1f70b20b	MongoServerError: E11000 duplicate key error collection: folbenDB.users index: username_1 dup key: { username: "Favour Adigun" }
+20250130	20:35:19	08438094-709e-4511-b22f-14253835ca29	MongoServerError: E11000 duplicate key error collection: folbenDB.users index: schoolName_1 dup key: { schoolName: "Babcock University" }
+20250130	20:35:58	f263d827-0ff4-4c8a-aab1-bc87a46694f9	userError: User Already Exists
+20250130	20:35:59	f440cdc9-46b1-495b-83e5-e4d97e5a42d7	userError: User Already Exists
+20250130	20:36:27	3eaa9c70-cd84-4ba7-be65-56cd66016f6a	userError: Phone Number Has Been Used
+20250130	20:36:28	1c71843c-f647-41cb-83fb-dd2df5c3ddee	userError: Phone Number Has Been Used
+20250130	20:36:31	0dee44ac-3c98-4c0c-a69e-7b00e6a09b6a	MongoServerError: E11000 duplicate key error collection: folbenDB.users index: username_1 dup key: { username: "Favour_Adigun" }
+20250130	20:36:55	28b29610-5c6e-47df-9037-0c8ba3552732	MongoServerError: E11000 duplicate key error collection: folbenDB.users index: schoolName_1 dup key: { schoolName: "Babcock University" }
+20250130	20:41:19	3e1cf55d-b460-4825-aaad-1ec198947cc6	userError: User Already Exists
+20250130	20:41:20	17e63889-ae73-4db4-9d03-e81dc2a356d1	userError: User Already Exists
+20250130	20:41:20	57a7132e-47d4-4a21-8d93-0012fe39c6de	userError: User Already Exists
+20250130	20:41:20	521e3420-10e0-4f57-aef0-c80be33380a0	userError: User Already Exists
+20250130	20:41:20	1ca519cf-81aa-4a8a-a8c8-293a0722c5a7	userError: User Already Exists
+20250130	20:41:20	c8793b6d-987b-4565-8187-5c195fb84443	userError: User Already Exists
+20250130	20:41:20	324456fc-c928-47bc-b250-330b879f594c	userError: User Already Exists
+20250130	20:41:21	9b59c903-f8ab-4e3c-8cea-8b361a45d7c5	userError: User Already Exists
+20250130	20:41:21	1dfd545b-d4d6-4ccc-82dd-1525a4fc2da7	userError: User Already Exists
+20250130	20:41:21	afd746c5-01e4-42ae-b615-915f63e70fd7	userError: User Already Exists
+20250130	20:41:21	18aa3747-67aa-4cae-a8fa-4c4fda52cfde	userError: User Already Exists
+20250130	20:41:22	ebf6442e-d9d2-484e-9d6e-c7e8d0f75590	userError: User Already Exists
+20250130	20:41:22	5b4bec38-fbf3-4f05-bb00-791417900df6	userError: User Already Exists
+20250130	20:41:22	5695f386-d6d2-4b89-bcb9-8dbf85c5914c	userError: User Already Exists
+20250130	20:41:22	3a66b610-f579-44c4-bf6f-dc2fa2d11823	userError: User Already Exists
+20250130	20:41:22	408cb04b-6015-4d3d-a807-c51a3cc5bf42	userError: User Already Exists
+20250130	20:41:22	a4e3f71f-1a58-4ad1-834d-2ab2b3b2410c	userError: User Already Exists
+20250130	20:41:22	575e7c66-3f9a-4a01-9813-d66ec2df14e7	userError: User Already Exists
+20250130	20:41:22	e6cd8b94-bc8e-407d-b451-f33061830fe0	userError: User Already Exists
+20250130	20:41:23	04218f39-28da-40c1-8acb-c6dde33367fa	userError: User Already Exists
+20250130	20:41:23	9e9d8f51-0398-4acb-bbe7-094f864a0120	userError: User Already Exists
+20250130	20:41:23	3358ae27-9c36-4cdb-9e94-80fc0f5c47f8	userError: User Already Exists
+20250130	20:41:23	6bafb339-1768-4f5d-8204-8790031cef79	userError: User Already Exists
+20250130	20:41:23	fc9de0d6-6a10-4fc0-9fd3-ab5061434ca1	userError: User Already Exists
+20250130	20:41:23	4ff49526-1f3d-4e35-b0c4-5aff02a1c2b0	userError: User Already Exists
+20250130	20:41:23	c164030f-2870-402e-9de5-de0b9189e79a	userError: User Already Exists
+20250130	20:41:23	85423e5e-0d25-4e19-8f39-4b06b2399756	userError: User Already Exists
+20250130	20:41:23	eb2115c9-beaf-45df-bdff-7f0318c53806	userError: User Already Exists
+20250130	20:41:23	59fcf37b-285c-48ca-90f7-115ae639f97d	userError: User Already Exists
+20250130	20:41:24	7276ee8f-4bae-4803-aa96-a2b2bd903184	userError: User Already Exists
+20250130	20:41:24	0dd65a0a-7d8b-4aa2-b7bc-9973d07dd8f4	userError: User Already Exists
+20250130	20:42:02	99f5ff5f-0486-4355-9763-19bc60f2a45f	userError: User Already Exists
+20250130	20:42:03	1008c394-ac66-49bb-a800-3ac803e32fda	userError: User Already Exists
+20250130	20:42:03	dcb51be4-d7c1-478f-974d-2bdfcd2f2cf0	userError: User Already Exists
+20250130	20:42:04	439c3deb-4d5b-4799-af60-934b331ebef6	userError: User Already Exists
+20250130	20:42:04	7d2a7f30-0ea6-48b3-8146-342a29dbc4bc	userError: User Already Exists
+20250130	20:42:28	84c708c6-4daa-46fa-b1b2-f3f33af3484d	userError: Phone Number Has Been Used
+20250130	20:42:33	5f9f0328-51ed-44cb-b62c-3e7fb2580432	userError: This Matriculation Number Has Been Registered With Another Account
+20250130	20:42:38	a8072d58-0824-4fe2-83c0-b6811ef58f6b	userError: User Already Exists
+20250130	20:42:39	f375e751-3c2f-408d-b51f-62b4c234aeae	userError: User Already Exists
+20250130	20:42:40	4d44a4cc-32e6-4e1b-a987-79c505ddd2c2	userError: User Already Exists
+20250130	20:42:40	0dbed6ee-b317-44fa-a475-94f7e56500e9	userError: User Already Exists
+20250130	20:42:40	bb64b4eb-2250-4cd6-a568-62eca4aeb43c	userError: User Already Exists
+20250130	20:42:40	c34ba519-1804-4d4f-a3ca-18bfa502e34d	userError: User Already Exists
+20250130	20:42:40	fc653e72-cdd5-4b4a-95d1-b4186d2043f2	userError: User Already Exists
+20250130	20:42:41	0974b174-3919-46f7-b435-a94af5c8e5be	userError: User Already Exists
+20250130	20:42:41	c2fcebbc-b579-4d25-8312-87284d22dd5f	userError: User Already Exists
+20250130	20:42:41	b077f50a-0308-41eb-85d6-5aa7516a54f6	userError: User Already Exists
+20250130	20:43:42	b0d2aba8-b215-4b65-a997-6c15c5573545	userError: User Already Exists
+20250130	20:43:42	5c898ec9-4440-4659-96cd-8efa35db7b58	userError: User Already Exists
+20250130	20:43:52	8bc0bfb5-591d-4db4-ae36-bc6a7aed9006	userError: Phone Number Has Been Used
+20250130	20:43:57	eb141733-3481-44b5-9fc5-4d62fff30f9e	userError: Phone Number Has Been Used
+20250130	20:43:58	06f82650-b1b1-44cc-99fc-8bbd852d0078	userError: Phone Number Has Been Used
+20250130	20:44:04	c6df3b2e-add4-4abf-b8c8-b791b67547f2	userError: User Already Exists
+20250130	20:44:25	cd03dbf0-b8e2-4960-a60b-619d04fcf871	userError: Phone Number Has Been Used
+20250130	20:44:26	4cf133db-1b56-4b4f-965d-3082c3be2a28	userError: Phone Number Has Been Used
+20250130	20:44:35	16536c77-278b-4c2e-b8aa-df659ed2c62f	userError: Phone Number Has Been Used
+20250130	20:44:36	287d224a-2260-45f8-a129-715e5a09f8f9	userError: Phone Number Has Been Used
+20250130	20:44:40	eb811b51-bf2d-4b70-82fe-540751c7359d	userError: This Matriculation Number Has Been Registered With Another Account
+20250130	20:44:41	0db76453-60f2-476a-b473-9391b9d659b9	userError: This Matriculation Number Has Been Registered With Another Account
+20250130	20:44:46	0dfd6020-4c1e-438f-80f1-7b1cf58c2d33	userError: User Already Exists

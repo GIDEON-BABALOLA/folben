@@ -7,7 +7,7 @@ const { generateAccessToken, generateRefreshToken} = require(path.join(__dirname
 const { logEvents } = require(path.join(__dirname, "..", "middlewares", "logEvents.js"))
 const { adminError, validatorError } = require(path.join(__dirname, "..", "utils", "customError.js"))
 const registerAdmin = async(req, res) => {
-try{a
+try{
 const { 
 username,
 mobile,
@@ -70,11 +70,10 @@ const loginAdmin = async(req, res) => {
             const id = foundAdmin?._id.toString()
             const refreshToken = generateRefreshToken(id, foundAdmin.role)
             await Admin.findByIdAndUpdate(id, {refreshToken : refreshToken}, { new : true})
-            res.cookie("refreshToken", refreshToken, { httpOnly : true, maxAge: 60 * 60 * 1000 * 24 * 7, sameSite : "None",  secure : true })
+            res.cookie("refreshToken", refreshToken, { httpOnly : true, maxAge: 60 * 60 * 1000 * 24 * 7, sameSite : "None",  secure : false })
             //Seven Day Refresh Token
         const detailsOfAdminToBeSent = _.omit(foundAdmin.toObject(), "refreshToken")
-        res.status(201).json({...detailsOfAdminToBeSent, accessToken : generateAccessToken(id, foundAdmin.role),
-            refreshToken : refreshToken
+        res.status(201).json({...detailsOfAdminToBeSent, accessToken : generateAccessToken(id, foundAdmin.role)
         })
          }
         else{
@@ -96,7 +95,7 @@ const loginAdmin = async(req, res) => {
 const getAdmin = async (req, res) => {
     const { _id } = req.user
     try{
-        const admin = await Admin.findById(_id)
+        const admin = await Admin.findById({_id : _id})
         if(!admin){
             throw new adminError("You Are Not Logged In", 401)
         }
@@ -126,14 +125,15 @@ const logoutAdmin = async(req, res) => {
         const refreshToken = cookies.refreshToken;
         const admin = await Admin.findOne({refreshToken : refreshToken})
         if(!admin){
-            res.clearCookie("refreshToken", {httpOnly: true, sameSite : "None" , secure  : true })
+            res.clearCookie("refreshToken", {httpOnly: true, sameSite : "None" , secure  : false })
             return res.status(200).json({message : "Successfully Logged Out", "success" : true})
         }
-        user.refreshToken = ""
-        await user.save();      
-        res.clearCookie("refreshToken", {httpOnly: true,  sameSite : "None", secure : true })
+        admin.refreshToken = ""
+        await admin.save();      
+        res.clearCookie("refreshToken", {httpOnly: true,  sameSite : "None", secure : false })
         return res.status(200).json({message : "Successfully Logged Out now", "success" : true})
     }catch(error){
+        console.log(error)
         logEvents(`${error.name}: ${error.message}`, "logoutadminError.txt", "adminError")
         if (error instanceof adminError) {
             return res.status(error.statusCode).json({ error : error.message})

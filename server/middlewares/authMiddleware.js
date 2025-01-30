@@ -5,6 +5,7 @@ const { logEvents } = require(path.join(__dirname, "logEvents.js"))
 const User = require(path.join(__dirname, "..", "models", "userModel.js"))
 const Admin =  require(path.join(__dirname, "..", "models", "adminModel.js"))
 const authMiddleware = async (req, res, next)=>{
+    console.log(req.cookies)
     let token;
     if(req?.headers?.authorization?.startsWith("Bearer") || req.cookies.refreshToken){
       switch (true) {

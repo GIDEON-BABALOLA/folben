@@ -11,6 +11,7 @@ const userRouter = require(path.join(__dirname,  "routes", "userRoute.js"))
 const adminRouter = require(path.join(__dirname,  "routes", "adminRoute.js"))
 const bookingsRouter = require(path.join(__dirname,  "routes", "bookingsRoute.js"))
 const newsletterRouter = require(path.join(__dirname,  "routes", "newsletterRoute.js"))
+const driverRouter = require(path.join(__dirname,  "routes", "driverRoute.js"))
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors(corsOptions))
@@ -34,8 +35,9 @@ app.use((err, req, res, next) => {
   
 app.use("/api/user", userRouter);
 app.use("/api/admin", adminRouter);
-app.use("/api/bookings", bookingsRouter);
+app.use("/api/booking", bookingsRouter);
 app.use("/api/newsletter", newsletterRouter);
+app.use("/api/driver", driverRouter);
 mongoose.connect(process.env.FOLBEN_MONGODB_URL)
 .then(() => {
       app.listen(PORT, () => {

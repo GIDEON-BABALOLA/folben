@@ -17,6 +17,11 @@ const driverSchema = new mongoose.Schema({
         type : String,
         required : true,
         unique : true
+    },
+    accountNumber : {
+        type : String,
+        required : true,
+        unique : true
     }
 }, {
     timestamps : true

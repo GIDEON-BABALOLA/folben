@@ -1,0 +1,18 @@
+20250130	20:46:51	f75a47b3-0621-41a7-9887-3f293f21027b	userError: Please Fill In All The Fields
+20250130	20:46:52	2f396ad7-769d-47a2-9661-e86abc4c41a4	userError: Please Fill In All The Fields
+20250130	20:47:11	88c31c8f-34dc-4a0b-8121-3af23435f4a9	userError: Please Fill In All The Fields
+20250130	20:47:12	c1b1b4b6-685b-480d-819f-92854bde3394	userError: Please Fill In All The Fields
+20250130	20:47:37	e4e89a66-53d0-4989-b4dc-45552ee8cc31	MongoServerError: E11000 duplicate key error collection: folbenDB.newsletters index: email_1 dup key: { email: "gideonbabalola69@gmail.com" }
+20250130	20:47:38	5b9fa48f-6a1f-4032-b287-4406a76ebb8c	MongoServerError: E11000 duplicate key error collection: folbenDB.newsletters index: email_1 dup key: { email: "gideonbabalola69@gmail.com" }
+20250130	20:48:02	73bb47d6-a075-4ff0-985e-9d2a458a6669	MongoServerError: E11000 duplicate key error collection: folbenDB.newsletters index: email_1 dup key: { email: "gideonbabalola69@gmail.com" }
+20250130	20:48:02	afc27313-7f7c-4df3-9db1-d782e041932a	MongoServerError: E11000 duplicate key error collection: folbenDB.newsletters index: email_1 dup key: { email: "gideonbabalola69@gmail.com" }
+20250130	20:49:18	ae159608-701c-4cb4-9b71-4f5c620dc4be	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:49:19	24ae3dee-b7a2-4359-be7c-63092f7ed429	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:49:19	a7d36551-881f-4542-9386-fd3f1d36c10f	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:49:35	e25a01db-1db3-44f0-9f33-cfe6612ff5a0	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:49:36	90ca9b3e-3907-459b-ac58-71f855bf1211	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:50:01	07cf8172-0147-4c8d-9e6a-feac67d0a298	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:50:21	2fe79780-506b-4e6e-a06f-f88d79bcec3a	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:51:30	5bef1175-48e9-491a-919e-dcaec9ac5606	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:53:04	29724108-6066-4660-993e-db0ffff541e6	userError: You Have Subscribed To Our Newsletter Before
+20250130	20:53:12	5b8f714b-4f59-47b2-b79a-10e34bfa17dd	userError: You Have Subscribed To Our Newsletter Before

@@ -8,3 +8,20 @@
 20250130	12:36:35	3e8bcc69-afcb-4e17-ad72-cd8adafbca99	adminError: Admin Already Exists
 20250130	12:36:36	5a46a137-0786-4fbf-b89c-9e507384e65d	adminError: Admin Already Exists
 20250130	12:37:09	d1403fdc-9ba6-4614-8fb4-7f30c6c5455f	adminError: Phone Number Has Been Used
+20250130	20:11:58	e2f6bd52-089a-4cfd-9e0d-3dcae5894e3e	ReferenceError: a is not defined
+20250130	20:12:17	6b329eb0-1d4b-49ed-af6e-b0ff445d03e6	adminError: Admin Already Exists
+20250130	20:12:18	de62cb26-c4c3-44e3-aa8c-626fed2a7754	adminError: Admin Already Exists
+20250130	20:12:19	0582d691-e38f-4b01-8d31-6c725ee4bb2c	adminError: Admin Already Exists
+20250130	20:12:50	03cd7a12-bdb3-4f82-954f-e8ded6ecd4d0	adminError: Phone Number Has Been Used
+20250130	20:12:58	595ac8e6-34eb-49a8-9cea-d1b77cc704d9	adminError: Admin Already Exists
+20250130	20:37:49	c1110872-7ff0-4cf5-86fa-518f9f0a4d91	adminError: Admin Already Exists
+20250130	20:38:20	8aeacb9d-496e-4bc0-a981-bf08bbe3580c	adminError: Phone Number Has Been Used
+20250130	20:38:30	f7641aee-5a0c-4e89-ac19-2d50731d3366	adminError: Admin Already Exists
+20250130	20:40:46	75e9a603-0aa6-4dea-9296-4929c0e71817	adminError: Admin Already Exists
+20250130	20:40:46	d2fd7b71-70a3-4f3e-b179-f3e1d5f4e75b	adminError: Admin Already Exists
+20250130	20:40:46	a27afe39-4c4b-47ba-ba7f-51a88f98c709	adminError: Admin Already Exists
+20250130	20:40:46	9c85680c-efe9-43f1-ba0a-8a0b7e800943	adminError: Admin Already Exists
+20250130	20:40:47	aeb986f1-729b-4321-b23a-769f7de4ca8d	adminError: Admin Already Exists
+20250130	20:40:47	4290d356-9b75-489f-94fd-35e4c0b0ce6a	adminError: Admin Already Exists
+20250130	20:40:47	bd49977e-ec27-4138-ac26-5864ef7a07e2	adminError: Admin Already Exists
+20250130	20:40:47	3d8603dd-5cce-4971-bcd2-9899ad7f33d9	adminError: Admin Already Exists
