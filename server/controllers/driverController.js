@@ -9,7 +9,10 @@ vehicle,
 plateNumber,
 mobile
         } = req.body;
-        if(!username || !vehicle || !plateNumber){
+try{
+
+
+        if(!username || !vehicle || !plateNumber || !mobile){
                 throw new adminError("Please Fill In All The Fields", 400)
         }
         const foundDriver = await Driver.findOne({plateNumber : plateNumber})
@@ -27,6 +30,14 @@ const newDriver = await Driver.create({
     mobile
          })
          res.status(201).json({ message: "Creation of Driver Was Successful", driver: newDriver });
+        }catch(error){
+            console.log(error)
+            if(error instanceof adminError){
+                return res.status(error.statusCode).json({ error : error.message})
+            }else{
+                return res.status(500).json({error : "Internal Server Error"})
+            }
+        }
 }
 const deleteDriver = async (req, res) => {
     const { id } = req.params;
@@ -37,6 +48,7 @@ const deleteDriver = async (req, res) => {
         }
         res.status(200).json({ message: "Deletion of Driver Was Successful", driver: oldDriver });
     }catch(error){
+        console.log(error)
         logEvents(`${error.name}: ${error.message}`, "deleteDriverError.txt", "adminError")
          if(error instanceof adminError){
             return res.status(error.statusCode).json({ error : error.message})

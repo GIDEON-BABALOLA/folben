@@ -5,7 +5,11 @@ meta {
 }
 
 post {
-  url: {{base_url}}/user/register-user
-  body: none
+  url: {{base_url}}/user/login-user
+  body: json
   auth: none
+}
+
+body:json {
+  {"email" : "favouradigundamilare@gmail.com", "password" : "Gcomputers1$"}
 }

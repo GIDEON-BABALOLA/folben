@@ -6,6 +6,10 @@ meta {
 
 post {
   url: http://localhost:3000/api/driver/add-driver
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {"username" : "Jacob Tolani", "vehicle" : "Bus", "plateNumber" : "JNI-123DE", "mobile" : "09102123"}
 }

@@ -4,8 +4,12 @@ meta {
   seq: 1
 }
 
-get {
+post {
   url: http://localhost:3000/api/newsletter/subscribe-to-newsletter
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {"email" : "favouradigundamilare@gmail.com"}
 }

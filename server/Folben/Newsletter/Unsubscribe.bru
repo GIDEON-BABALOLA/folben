@@ -6,6 +6,10 @@ meta {
 
 delete {
   url: http://localhost:3000/api/newsletter/unsubscribe-to-newsletter
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {"email" : "favouradigundamilare@gmail.com"}
 }

@@ -5,7 +5,7 @@ const {
     bookARide, 
     getAllBookings
 } = require(path.join(__dirname, "..", "controllers", "bookingsController.js"))
-const { authMiddleware, isAdministrator} = require(path.join(__dirname, "..", "middlewares", "authMiddleware.js"))
-router.post("/book-a-ride", authMiddleware,  bookARide);
+const { authMiddleware, isAdministrator, isUser} = require(path.join(__dirname, "..", "middlewares", "authMiddleware.js"))
+router.post("/book-a-ride", authMiddleware, isUser,  bookARide);
 router.get("/get-all-bookings", authMiddleware,  isAdministrator, getAllBookings)
 module.exports = router

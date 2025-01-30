@@ -1,5 +1,7 @@
 const path = require("path")
 const Booking = require(path.join(__dirname, "..", "models", "bookingModel.js"))
+const { logEvents } = require(path.join(__dirname, "..", "middlewares", "logEvents.js"))
+const { adminError, userError } = require(path.join(__dirname, "..", "utils", "customError.js"))
 const Driver = require(path.join(__dirname, "..", "models", "driverModel.js"))
 const bookARide = async(req, res) => {
     try{
@@ -15,7 +17,7 @@ transactionReference
 const availableDrivers = await Driver.find().lean();
 const randomIndex = Math.floor(Math.random() * availableDrivers.length);
 const selectedDriver = availableDrivers[randomIndex];
- const newUser = await Booking.create({ 
+ const newBooking = await Booking.create({ 
     currentLocation,
     dateBooked : new Date(),
     destination,
@@ -25,12 +27,12 @@ const selectedDriver = availableDrivers[randomIndex];
     driver : selectedDriver.username,
     plateNumber : selectedDriver.plateNumber
  })
- res.status(201).json({ message: "Creation of User Was Successful", user: newUser });
+ res.status(201).json({ message: "Creation of Booking Was Successful", booking: newBooking });
     }
     catch(error){
         console.log(error)
-        logEvents(`${error.name}: ${error.message}`, "getAllBookingsError.txt", "adminError")  
-        if(error instanceof adminError){
+        logEvents(`${error.name}: ${error.message}`, "getAllBookingsError.txt", "userError")  
+        if(error instanceof userError){
             return res.status(error.statusCode).json({ message : error.message})
         }
         else{

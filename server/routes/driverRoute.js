@@ -9,5 +9,5 @@ const {
 const { authMiddleware, isAdministrator} = require(path.join(__dirname, "..", "middlewares", "authMiddleware.js"))
 router.post("/add-driver", authMiddleware, isAdministrator, addDriver);
 router.get("/get-all-drivers", authMiddleware,  isAdministrator, getAllDrivers)
-router.delete("/delete-driver", authMiddleware, isAdministrator, deleteDriver);
+router.delete("/delete-driver/:id", authMiddleware, isAdministrator, deleteDriver);
 module.exports = router
