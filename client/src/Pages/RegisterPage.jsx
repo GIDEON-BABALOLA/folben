@@ -1,8 +1,13 @@
 import React from 'react'
-
+import Register from '../components/Account/Register'
 const RegisterPage = () => {
   return (
-    <div>RegisterPage</div>
+    <>
+    <div style={{backgroundColor : "#f2f2f2", padding : "10px 40px" }} className='main-container'>
+    <Register />
+    </div>
+
+    </>
   )
 }
 

@@ -1,8 +1,12 @@
-import React from 'react'
 
+import Newsletter from '../components/common/Newsletter'
+import Testimonials from '../components/common/Testimonials'
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div className='main-container' style={{backgroundColor : "#FFFFFF"}}>
+      <Testimonials />
+      <Newsletter />
+      </div>
   )
 }
 

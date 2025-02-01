@@ -1,0 +1,207 @@
+.register-page-full-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+  
+    }
+    .register-page-left-title{
+        color: #525252;
+        font-family: "Poppins", sans-serif;
+        padding: 20px 100px;
+    }
+ .register-form-title{
+    color: #525252;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600px;
+ }
+    .register-background{
+        width: 45vw;
+        height: 90vh;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .register-form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0px 80px;
+    }
+    .register-form input{
+    border: none;
+    outline: none;
+    padding: 18px 30px;
+    background-color: #F3F1FF;
+    border-radius: 10px;
+    color: gray;
+    
+    }
+    .register-form  input::placeholder {
+        font-family: 'Poppins', sans-serif; /* Replace with your desired font */
+        font-size: 16px; /* Adjust size if needed */
+        color: gray; /* Optional: Change placeholder color */
+        padding: 0px 10px;
+      }
+    .register-page-left-section{
+height: 100%;
+display: flex;
+flex-direction: column;
+/* align-items: center; */
+justify-content: center;
+gap: 10px;
+    }
+    .register-page-right-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-commander{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-family: "Poppins", sans-serif;
+        flex-direction: column;
+    }
+.register-form-button{
+    outline: none;
+    border: none;
+    color: white;
+    padding: 20px 50px;
+    font-weight: 1000;
+    font-family: "Poppins";
+    background: linear-gradient(to right, #8371F2, #634DEF);
+    font-size: 0.9rem;
+    border-radius: 20px;
+    margin: 0px 80px;
+    cursor: pointer;
+
+}
+
+.input-wrapper {
+    position: relative;
+    width: 400px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 20px 40px; /* Space for the icon */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-left: 30px;
+  }
+  
+  
+  .input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: gray;
+  }
+  .safest-ride{
+    background-color: #A49BD2;
+    color: white;
+    font-weight: 700;
+    font-family:  "Poppins";
+    position: absolute;
+    padding: 50px 30px;
+    top: 70px;
+    left: 670px;
+    border-radius: 40px;
+  }
+  
+  @media screen and (max-width: 1024px)
+  {
+    .register-page-full-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin-left: 0px;
+     width: 100vw;
+     margin-left: 0px;
+        height: 100vh; /* Ensure full height */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    
+    }
+    .register-page-right-section {
+        display: none; /* Hide image section */
+    }
+    .register-form {
+        padding: 0px 0px; /* Reduce padding */
+        width: 100%;
+        gap: 40px;
+    }
+    .register-form input{
+        padding: 20px 30px; 
+    }
+  }
+@media screen and (max-width: 768px) { /* Mobile View */
+    .register-page-full-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin-left: 0px;
+     width: 80vw;
+        height: 100vh; /* Ensure full height */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    
+    }
+
+    .register-page-right-section {
+        display: none; /* Hide image section */
+    }
+
+    .register-page-left-title {
+        padding: 10px 20px; /* Reduce padding */
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .register-form {
+        padding: 0px 20px; /* Reduce padding */
+        width: 100%;
+    }
+
+    .register-form input {
+        width: 100%; /* Ensure input fields take full width */
+        padding: 14px 30px;
+    }
+
+    .input-wrapper {
+        width: 100%; /* Ensure input with icon fits well */
+    }
+
+    .register-form-button {
+        width: 100%;
+        padding: 15px;
+        margin: 0; /* Center button */
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .register-form  input::placeholder {
+        font-family: 'Poppins', sans-serif; /* Replace with your desired font */
+        font-size: 16px; /* Adjust size if needed */
+        color: gray; /* Optional: Change placeholder color */
+        padding: 0px 10px;
+      }
+
+
+    .safest-ride {
+        padding: 30px 20px;
+        font-size: 14px;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+}

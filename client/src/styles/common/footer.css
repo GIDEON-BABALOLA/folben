@@ -1,0 +1,9 @@
+.footer-content-container{
+    flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+    .footer-content-container{
+        flex-direction: column;
+        gap: 20px;
+    } 
+}

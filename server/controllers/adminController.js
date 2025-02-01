@@ -70,7 +70,7 @@ const loginAdmin = async(req, res) => {
             const id = foundAdmin?._id.toString()
             const refreshToken = generateRefreshToken(id, foundAdmin.role)
             await Admin.findByIdAndUpdate(id, {refreshToken : refreshToken}, { new : true})
-            res.cookie("refreshToken", refreshToken, { httpOnly : true, maxAge: 60 * 60 * 1000 * 24 * 7, sameSite : "None",  secure : false })
+            res.cookie("refreshToken", refreshToken, { httpOnly : true, maxAge: 60 * 60 * 1000 * 24 * 7, sameSite : "None",  secure : true })
             //Seven Day Refresh Token
         const detailsOfAdminToBeSent = _.omit(foundAdmin.toObject(), "refreshToken")
         res.status(201).json({...detailsOfAdminToBeSent, accessToken : generateAccessToken(id, foundAdmin.role)
@@ -125,12 +125,12 @@ const logoutAdmin = async(req, res) => {
         const refreshToken = cookies.refreshToken;
         const admin = await Admin.findOne({refreshToken : refreshToken})
         if(!admin){
-            res.clearCookie("refreshToken", {httpOnly: true, sameSite : "None" , secure  : false })
+            res.clearCookie("refreshToken", {httpOnly: true, sameSite : "None" , secure  : true })
             return res.status(200).json({message : "Successfully Logged Out", "success" : true})
         }
         admin.refreshToken = ""
         await admin.save();      
-        res.clearCookie("refreshToken", {httpOnly: true,  sameSite : "None", secure : false })
+        res.clearCookie("refreshToken", {httpOnly: true,  sameSite : "None", secure : true })
         return res.status(200).json({message : "Successfully Logged Out now", "success" : true})
     }catch(error){
         console.log(error)
